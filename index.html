@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Seatwork 2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	
+	<style>
+		body {
+			font-family: 'Courier New', monospace;
+			background-image: url(https://images.squarespace-cdn.com/content/v1/5b7fcdb28ab722e3da4af3cc/1592215816388-MJCNC0AYHWPXX67BP9UL/Monument+Grey.jpeg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		.container {
+			justify-content: center;
+		}
+		h3 {
+			text-align: center;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+    <div class="container mt-5">
+	<center><img src="https://cdn.wikiwiki.jp/to/w/nicosnextbot/jermias/::ref/%E3%82%B8%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%B9.png.webp?rev=51c36160c89465e89307d11f2a541ec8&t=20221226110931" width="500px" class="rounded-circle" alt="gallo" id="brand"></center>
+	<h3>BE A DOLL AND HELP YUKANOV SLOVAKONOVICH RUDIVNIET CALCULATE SOME VARIABLES, PLEASE?</h3>
+	
+        <div class="mb-3">
+            <label for="inputX" class="form-label"><strong><h3>Enter a value for X:</h3></strong></label>
+            <input type="number" class="form-control" id="inputX">
+        </div>
+        <div class="mb-3">
+            <label for="inputY" class="form-label"><strong><h3>Enter a value for Y:</h3></strong></label>
+            <input type="number" class="form-control" id="inputY">
+        </div>
+		
+		<p><strong><h3>Use the buttons below to solve.</h3></strong></p>
+			
+		<div class="mb-3">
+		</div>
+		
+		<center>
+        <div class="mb-3">
+            <button type="button" class="btn btn-success" onclick="calculate('sum')">Sum of X and Y</button>
+            <button type="button" class="btn btn-primary" onclick="calculate('product')">Product of X and Y</button>
+            <button type="button" class="btn btn-danger" onclick="calculate('difference')">Difference of X and Y</button>
+            <button type="button" class="btn btn-warning" onclick="calculate('equality')">Equality of X and Y</button>
+        </div>
+		</center>
+		
+    <div id="result" class="mb-3"></div>
+    </div>
+
+    <script>
+        function calculate(operation) {
+            var x = parseFloat(document.getElementById('inputX').value);
+            var y = parseFloat(document.getElementById('inputY').value);
+            var result;
+
+        switch (operation) {
+                case 'sum':
+                    result = x + y;
+                    document.getElementById('result').textContent = 'Sum: ' + result;
+                    window.alert('The sum of ' + x + ' and ' + y + ' is ' + result);
+                    break;
+                case 'product':
+                    result = x * y;
+                    document.getElementById('result').textContent = 'Product: ' + result;
+                    window.alert('The product of ' + x + ' and ' + y + ' is ' + result);
+                    break;
+                case 'difference':
+                    result = x - y;
+                    document.getElementById('result').textContent = 'Difference: ' + result;
+                    window.alert('The difference of ' + x + ' and ' + y + ' is ' + result);
+                    break;
+                 case 'equality':
+				 
+        if (x === y) {
+            document.getElementById('result').textContent = 'X is equal to Y';
+        } else {
+            document.getElementById('result').textContent = 'X is not equal to Y';
+        }
+        break;
+        }
+        }
+			
+    </script>
+</body>
+</html>
